@@ -152,11 +152,12 @@ class TeraboxLink():
 
         self.r.close()
     
-    #--> Bungkus url asli dengan redirect
+    #--> Bungkus url asli setelah di-quote, lalu base64
     def wrap_url(self, original_url:str) -> str:
         selected_base = random.choice(self.base_urls)
-        b64_encoded = base64.urlsafe_b64encode(original_url.encode()).decode()
-        return f'https://{selected_base}.workers.dev/?url={quote(b64_encoded)}'
+        quoted_url = quote(original_url, safe='')
+        b64_encoded = base64.urlsafe_b64encode(quoted_url.encode()).decode()
+        return f'https://{selected_base}.workers.dev/?url={b64_encoded}'
 
 class Test():
 

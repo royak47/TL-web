@@ -1,5 +1,5 @@
 // Version
-const version = 'Versi 1.4';
+const version = 'Versi 1.5';
 document.getElementById('app-version').innerText = version;
 
 // Open Information Menu

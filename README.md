@@ -62,6 +62,13 @@
 
 <br>
 
+- **Apa Yang Baru Di Versi 1.5?**
+    - Perbaikan bug tidak bisa download & streaming
+    - Menggunakan service dari [`hnn`](https://terabox.hnn.workers.dev/) untuk mendapatkan url download
+    - Menggunakan `Terabox Proxy` untuk streaming video
+
+    <br>
+
 - **Apa Yang Baru Di Versi 1.4?**
     - Fitur streaming video secara langsung
     - Support download berbagai format file

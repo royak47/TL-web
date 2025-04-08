@@ -5,7 +5,7 @@ const api = 'http://127.0.0.1:5000'; // Change This
 let buffer = '';
 let list_file;
 let params;
-let mode = 1;
+let mode = 3;
 
 // Add Event Listener Input
 const inputForm = document.getElementById('terabox_url');
@@ -192,12 +192,14 @@ async function printItem(item) {
     downloadButton.addEventListener('click', () => {
         if (mode == 1) initDownload(item.fs_id);
         else if (mode == 2) initDownload(item.fs_id, item.link);
+        else if (mode == 3) initDownload(item.fs_id);
     });
 
     const streamButton = new_element.querySelector(`#stream-${item.fs_id}`);
     streamButton.addEventListener('click', () => {
         if (mode == 1) initStream(item.fs_id);
         else if (mode == 2) initStream(item.fs_id, item.link);
+        else if (mode == 3) initStream(item.fs_id);
     });
 }
 
@@ -251,8 +253,17 @@ async function initDownload(fs_id, dlink=null) {
 }
 
 // Start Download
-async function startDownload(url) {
-    window.open(url, '_blank', 'noopener,noreferrer');
+// async function startDownload(url) {
+//     window.open(url, '_blank', 'noopener,noreferrer');
+// }
+function startDownload(url) {
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.target = '_blank'; // tab baru
+    // JANGAN gunakan anchor.download di sini!
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
 }
 
 // Initialization for stream
@@ -304,9 +315,10 @@ async function getURLStream(fs_id, dlink=null) {
         const response = await req.json();
 
         if (response.status == 'success') {
-            const old_url = response['download_link']['url_2'];
-            const old_domain = old_url.match(/:\/\/(.*?)\./)[1];
-            const stream_url = old_url.replace(old_domain, 'kul-ddata').replace('by=themis', 'by=dapunta');
+            // const old_url = response['download_link']['url_2'];
+            // const old_domain = old_url.match(/:\/\/(.*?)\./)[1];
+            // const stream_url = old_url.replace(old_domain, 'kul-ddata').replace('by=themis', 'by=dapunta');
+            const stream_url = response['download_link']['url_2'];
             return(stream_url);
         }
         else return('');

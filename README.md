@@ -66,6 +66,7 @@
     - Perbaikan bug tidak bisa download & streaming
     - Menggunakan service dari [`hnn`](https://terabox.hnn.workers.dev/) untuk mendapatkan url download
     - Menggunakan `Terabox Proxy` untuk streaming video
+    - Tampilan UI baru
 
     <br>
 

@@ -1,9 +1,10 @@
 // Version
-const version = 'Versi 1.5';
+const version = 'Versi 1.5.5';
 document.getElementById('app-version').innerText = version;
 
 // Open Information Menu
 document.getElementById('information-button-open').addEventListener('click', () => {
+    console.log('test');
     document.getElementById('information-container').className = 'container-overlay-active poppins';
 });
 

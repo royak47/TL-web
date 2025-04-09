@@ -39,17 +39,29 @@
         <span class="container-status-mode">
             <span id="status-mode"></span>
         </span>
+        
+        <div class="layer1-wrapper">
+    
+            <!-- Section Header -->
+            <div class="container-header">
+                <span class="title">TeraDL</span>
+                <span class="subtitle">Terabox Video Downloader & Streaming</span>
+            </div>
 
-        <div class="container-header">
-            <span class="title">TeraDL</span>
-            <span class="subtitle">Terabox Video Downloader & Streaming</span>
+            <!-- Section Input -->
+            <div class="container-input">
+                <input id="terabox_url" type="text" placeholder="Masukkan URL Terabox" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false">
+                <button id="submit_button" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        
         </div>
 
-        <div class="container-input">
-            <input id="terabox_url" type="text" placeholder="Masukkan URL Terabox" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false">
-            <button id="submit_button" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+        <!-- Section Stream Video -->
+        <div id="stream-video" class="stream-video-section inactive">
+
         </div>
 
+        <!-- Section Result -->
         <div class="container-result">
             <div id="result" class="box-result">                
             </div>
@@ -66,7 +78,7 @@
 
     <div id="information-container" class="container-overlay-inactive poppins">
 
-        <span class="container-information-button">
+        <span class="container-information-button-active">
             <i id="information-button-close" class="fa-solid fa-xmark"></i>
         </span>
 
@@ -88,3 +100,5 @@
 </body>
 
 </html>
+
+<!-- https://1024terabox.com/s/1eBHBOzcEI-VpUGA_xIcGQg -->

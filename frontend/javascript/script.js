@@ -1,4 +1,5 @@
 // Global
+
 const api = 'http://127.0.0.1:5000'; // Change This
 // const api = 'https://teradl-api.dapuntaratya.com'; // Change This
 
@@ -103,6 +104,11 @@ async function readInput(raw_url) {
     if (url) {
         list_file = [];
         params = {};
+
+        const stream_box = document.getElementById(`stream-video`);
+        stream_box.innerHTML = '';
+        stream_box.className = 'stream-video-section inactive'
+
         document.getElementById('result').innerHTML = '';
         loading('submit_button', true);
         await fetchURL(url);
@@ -183,8 +189,6 @@ async function printItem(item) {
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="video-box-${item.fs_id}" class="container-item-expand false">
         </div>`;
     box_result.appendChild(new_element);
 
@@ -253,13 +257,10 @@ async function initDownload(fs_id, dlink=null) {
 }
 
 // Start Download
-// async function startDownload(url) {
-//     window.open(url, '_blank', 'noopener,noreferrer');
-// }
 function startDownload(url) {
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.target = '_blank'; // tab baru
+    anchor.target = '_blank';
     // JANGAN gunakan anchor.download di sini!
     document.body.appendChild(anchor);
     anchor.click();
@@ -268,29 +269,20 @@ function startDownload(url) {
 
 // Initialization for stream
 async function initStream(fs_id, dlink=null) {
-    const expanded_box = document.getElementById(`file-${fs_id}`);
-    const video_box = document.getElementById(`video-box-${fs_id}`);
-    if (expanded_box.className == 'container-item') {
-        const source_vid = document.getElementById(`video-box-${fs_id}`);
-        if (source_vid.innerHTML.replace(/\s/g, '') === '') {
 
-            loading3(`stream-${fs_id}`, true);
-            const url_stream = await getURLStream(fs_id, dlink);
-            source_vid.innerHTML = `
-                <video controls>
-                    <source id="stream-video-${fs_id}" src="${url_stream}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>`;
-            loading3(`stream-${fs_id}`, false);
+    const stream_box = document.getElementById(`stream-video`);
+    loading3(`stream-${fs_id}`, true);
 
-        }
-        expanded_box.className = 'container-item expand';
-        video_box.className = 'container-item-expand';
-    }
-    else {
-        expanded_box.className = 'container-item';
-        video_box.className = 'container-item-expand false';
-    }
+    const url_stream = await getURLStream(fs_id, dlink);
+    stream_box.className = 'stream-video-section';
+    stream_box.innerHTML = '';
+    stream_box.innerHTML = `
+        <video controls>
+            <source id="stream-video-${fs_id}" src="${url_stream}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>`;
+    loading3(`stream-${fs_id}`, false);
+    
 }
 
 // Get URL Stream

@@ -7,7 +7,7 @@
 <table style="border-collapse: collapse;">
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Version</td>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">1.4</td>
+        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">1.5.5</td>
     </tr>
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Website</td>

@@ -1,6 +1,6 @@
-## TeraDL - Terabox Video Downloader & Streaming
+## TeraDL - Terabox File Downloader & Video Streaming
 
-<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> adalah platform untuk streaming atau mengunduh file Terabox secara gratis dan cepat, yang diciptakan agar pengguna tidak perlu menginstall aplikasi Terabox terlebih dahulu, tapi hanya dengan memasukkan url, kemudian file siap diunduh</div>
+<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> adalah platform untuk streaming video atau mengunduh file Terabox secara gratis dan cepat, yang diciptakan agar pengguna tidak perlu menginstall aplikasi Terabox terlebih dahulu, tapi hanya dengan memasukkan url, kemudian file siap diunduh</div>
 
 ### Informasi
 

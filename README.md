@@ -1,6 +1,15 @@
 ## TeraDL - Terabox File Downloader & Video Streaming
 
-<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> adalah platform untuk streaming video atau mengunduh file Terabox secara gratis dan cepat, yang diciptakan agar pengguna tidak perlu menginstall aplikasi Terabox terlebih dahulu, tapi hanya dengan memasukkan url, kemudian file siap diunduh</div>
+<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> adalah platform untuk streaming video atau mengunduh file Terabox secara gratis dan cepat, yang diciptakan agar pengguna tidak perlu menginstall aplikasi Terabox terlebih dahulu, tapi hanya dengan memasukkan url, kemudian file siap diunduh.</div>
+
+<br>
+
+<p align="left" style="max-height: 100%;">
+    <a href="https://github.com/Dapunta/TeraDL/stargazers"><img src="https://img.shields.io/github/stars/Dapunta/TeraDL?style=for-the-badge&color=ff0000" alt="Stars" style="max-height: 100%;"></a>
+    <a href="https://github.com/Dapunta/TeraDL/network/members"><img src="https://img.shields.io/github/forks/Dapunta/TeraDL?style=for-the-badge&color=9f9f00" alt="Forks" style="max-height: 100%;"></a>
+    <a href="https://github.com/Dapunta/TeraDL/commits"><img src="https://img.shields.io/github/commit-activity/t/Dapunta/TeraDL?style=for-the-badge&color=008800" alt="Commits" style="max-height: 100%;"></a>
+    <a href="https://github.com/Dapunta/TeraDL"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FDapunta%2FTeraDL&label=visitors&countColor=%230055ff" alt="Visitors" style="max-height: 100%;"></a>
+</p>
 
 ### Informasi
 
@@ -16,6 +25,10 @@
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">API</td>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;"><a href="https://teradl-api.dapuntaratya.com">TeraDL API</a></td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">API Doc</td>
+        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;"><a href="https://github.com/Dapunta/TeraDL/tree/main/api">Documentation</a></td>
     </tr>
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Author</td>
@@ -45,14 +58,25 @@
 
 ### TechStack
 
-<table style="border-collapse: collapse;">
+<table style="border-collapse: collapse; width: 100%;">
     <tr>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Backend</td>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Python (Flask)</td>
+        <td style="text-align: left; vertical-align: middle; padding: 8px;">
+            <strong>Backend</strong>
+        </td>
+        <td style="vertical-align: middle; padding: 8px;">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+        </td>
     </tr>
     <tr>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Frontend</td>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">HTML, CSS (VanillaCSS), Javascript (VanillaJS)</td>
+        <td style="text-align: left; vertical-align: middle; padding: 8px;">
+            <strong>Frontend</strong>
+        </td>
+        <td style="vertical-align: middle; padding: 8px;">
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+        </td>
     </tr>
 </table>
 
@@ -96,6 +120,16 @@
 
 <br>
 
-### Cara Penggunaan API
+### Catatan
 
-- Javascript : [Javascript Implementation](https://github.com/Dapunta/TeraDL/tree/main/api)
+> [!TIP]  
+> Jika ingin menjalankan di local, pastikan `flask_app.py` sudah di-run  
+> Lalu jalankan *live-server* atau *localhost* pada `index.html`
+
+> [!WARNING]  
+> Platform ini hanya berfungsi untuk link yang berkaitan dengan Terabox  
+> Contoh : `1024terabox`, `freeterabox`, `nephobox`, dan lainnya
+
+> [!CAUTION]  
+> Jangan abuse, gunakan sewajarnya !  
+> Segala tindakan adalah tanggung jawab pengguna  

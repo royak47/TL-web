@@ -1,6 +1,6 @@
 ## TeraDL - Terabox File Downloader & Video Streaming
 
-<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> adalah platform untuk streaming video atau mengunduh file Terabox secara gratis dan cepat, yang diciptakan agar pengguna tidak perlu menginstall aplikasi Terabox terlebih dahulu, tapi hanya dengan memasukkan url, kemudian file siap diunduh.<br><a href="/README(EN).md">English Version</a></div>
+<div style="text-align:justify; line-height:1.3;"><b>TeraDL</b> is a platform for streaming videos or downloading Terabox files for free and quickly, so that users don't need to install Terabox application, but only by entering the URL, then the file is ready to be downloaded.<br><a href="/README.md">Indonesia Version</a></div>
 
 <br>
 
@@ -11,7 +11,7 @@
     <a href="https://github.com/Dapunta/TeraDL"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FDapunta%2FTeraDL&label=visitors&countColor=%230055ff" alt="Visitors" style="max-height: 100%;"></a>
 </p>
 
-### Informasi
+### Information
 
 <table style="border-collapse: collapse;">
     <tr>
@@ -28,7 +28,7 @@
     </tr>
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">API Doc</td>
-        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;"><a href="/api/README.md">Documentation</a></td>
+        <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;"><a href="/api/README(EN).md">Documentation</a></td>
     </tr>
     <tr>
         <td style="border: 1px solid transparent; line-height:1.3; padding: 0px;">Author</td>
@@ -86,50 +86,50 @@
 
 <br>
 
-- **Apa Yang Baru Di Versi 1.5?**
-    - Perbaikan bug tidak bisa download & streaming
-    - Menggunakan service dari [`hnn`](https://terabox.hnn.workers.dev/) untuk mendapatkan url download
-    - Menggunakan `Terabox Proxy` untuk streaming video
-    - Tampilan UI baru
-
-    <br>
-
-- **Apa Yang Baru Di Versi 1.4?**
-    - Fitur streaming video secara langsung
-    - Support download berbagai format file
-        - Video : `.mp4`, `.mov`, `.mkv`, `.m4v`, `.asf`, `.avi`, `.wmv`, `.m2ts`, `.3g2`
-        - Gambar : `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`, `.svg`
-        - Lainnya : `.pdf`, `.docx`, `.zip`, `.rar`, `.7z`
-
-    <br>
-
-- **Apa Yang Baru Di Versi 1.3?**
-    - Penambahan mode baru *(`get link` dengan `cookies` dari sisi server)* sehingga URL download lebih awet, meminimalisir error, dan proses download menjadi lebih cepat
-        - **Mode 1** : Menggunakan cookies dynamic yang didapat dari scrap secara real time
-        - **Mode 2** : Menggunakan cookies static dari admin (sesi login akun admin)
-    - Auto switch mode jika `cookies` dari sisi server invalid
-
-    <br>
-
-- **Apa Yang Baru Di Versi 1.2?**
-
-    - [TeraDL](https://teradl.dapuntaratya.com/) adalah project lanjutan dari [TeraStream](https://terastream.dapuntaratya.com/)
-    - Perbaikan `get file` yang sebelumnya error
-    - Perubahan logika pemrograman untuk `get file` dan `get link` sehingga proses loading lebih cepat
-    - Perubahan tampilan menjadi lebih sederhana dan agar terkesan lebih menarik
+- **What's New In Version 1.5?**
+    - Bug fixes can't download & stream
+    - Using service from [`hnn`](https://terabox.hnn.workers.dev/) to get download url
+    - Using `Terabox Proxy` for video streaming
+    - New UI display
 
 <br>
 
-### Catatan
+- **What's New In Version 1.4?**
+    - Live video streaming feature
+    - Support download various file formats
+        - Video : `.mp4`, `.mov`, `.mkv`, `.m4v`, `.asf`, `.avi`, `.wmv`, `.m2ts`, `.3g2`
+        - Image : `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`, `.svg`
+        - Others : `.pdf`, `.docx`, `.zip`, `.rar`, `.7z`
+
+<br>
+
+- **What's New in Version 1.3?**
+    - Added new mode *(`get link` with `cookies` from server side)* so that download URL is more durable, minimizes errors, and download process becomes faster
+        - **Mode 1** : Using dynamic cookies obtained from scrap in real time
+        - **Mode 2** : Using static cookies from admin (admin account login session)
+    - Auto switch mode if `cookies` from server side is invalid
+
+<br>
+
+- **What's New in Version 1.2?**
+
+    - [TeraDL](https://teradl.dapuntaratya.com/) is a continuation project of [TeraStream](https://terastream.dapuntaratya.com/)
+    - Fixes `get file` which previously had error
+    - Changes in programming logic for `get file` and `get link` so that loading process faster
+    - Changes in appearance to be simpler and to make it look more attractive
+
+<br>
+
+### Notes
 
 > [!TIP]  
-> Jika ingin menjalankan di local, pastikan `flask_app.py` sudah di-run  
-> Lalu jalankan *live-server* atau *localhost* pada `index.html`
+> If you want to run locally, make sure `flask_app.py` is run  
+> Then run *live-server* or *localhost* on `index.html`  
 
 > [!WARNING]  
-> Platform ini hanya berfungsi untuk link yang berkaitan dengan Terabox  
-> Contoh : `1024terabox`, `freeterabox`, `nephobox`, dan lainnya
+> This platform only works for links related to Terabox  
+> Example: `1024terabox`, `freeterabox`, `nephobox`, and others  
 
 > [!CAUTION]  
-> Jangan abuse, gunakan sewajarnya !  
-> Segala tindakan adalah tanggung jawab pengguna  
+> Do not abuse, use it wisely !  
+> All actions are the responsibility of the user  

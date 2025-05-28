@@ -204,8 +204,8 @@ class Test():
 if __name__ == '__main__':
 
     T = Test()
-    # T.file()
-    # T.link()
+    T.file()
+    T.link()
 
 # [ Reference ]
 # https://terabox.hnn.workers.dev/

@@ -1,4 +1,4 @@
-import re, requests, base64, random
+import re, requests, base64, random, cloudscraper
 from urllib.parse import quote
 
 headers : dict[str, str] = {'user-agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36'}
@@ -9,6 +9,7 @@ class TeraboxFile():
     def __init__(self) -> None:
 
         self.r : object = requests.Session()
+        self.sc = cloudscraper.create_scraper()
         self.headers : dict[str,str] = headers
         self.result : dict[str,any] = {'status':'failed', 'sign':'', 'timestamp':'', 'shareid':'', 'uk':'', 'list':[]}
 
@@ -35,15 +36,14 @@ class TeraboxFile():
         }
         
         try:
-            r = requests.Session()
-            pos = r.get(post_url, headers=headers_post, allow_redirects=True).json()
+            self.sc = cloudscraper.create_scraper()
+            pos = self.sc.get(post_url, headers=headers_post, allow_redirects=True).json()
             if pos['ok']:
                 self.result['sign']      = pos['sign']
                 self.result['timestamp'] = pos['timestamp']
                 self.result['status']    = 'success'
             else: self.result['status']  = 'failed'
-            r.close()
-        except: self.result['status']    = 'failed'
+        except Exception: self.result['status'] = 'failed'
 
     #--> Get payload (root / top layer / overall data) and init packing file information
     def getMainFile(self) -> None:
@@ -99,7 +99,7 @@ class TeraboxLink():
         self.domain : str = 'https://terabox.hnn.workers.dev/'
         self.api    : str = f'{self.domain}api'
 
-        self.r : object = requests.Session()
+        self.sc = cloudscraper.create_scraper()
         self.headers : dict[str,str] = {
             'accept-language':'en-US,en;q=0.9,id;q=0.8',
             'referer':self.domain,
@@ -136,21 +136,19 @@ class TeraboxLink():
         #--> download link 1
         try:
             url_1=  f'{self.api}/get-download'
-            pos_1 = self.r.post(url_1, json=params, headers=self.headers, allow_redirects=True).json()
+            pos_1 = self.sc.post(url_1, json=params, headers=self.headers, allow_redirects=True).json()
             self.result['download_link'].update({'url_1':pos_1['downloadLink']})
         except Exception as e: print(e)
 
         #--> download link 2
         try:
             url_2=  f'{self.api}/get-downloadp'
-            pos_2 = self.r.post(url_2, json=params, headers=self.headers, allow_redirects=True).json()
+            pos_2 = self.sc.post(url_2, json=params, headers=self.headers, allow_redirects=True).json()
             self.result['download_link'].update({'url_2':self.wrap_url(pos_2['downloadLink'])})
         except Exception as e: print(e)
 
         if len(list(self.result['download_link'].keys())) != 0:
             self.result['status'] = 'success'
-
-        self.r.close()
     
     #--> Bungkus url asli setelah di-quote, lalu base64
     def wrap_url(self, original_url:str) -> str:
